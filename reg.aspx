@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="reg.aspx.vb" Inherits="reg" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="reg.aspx.cs" Inherits="reg" %>
 
 <!DOCTYPE html>
 
@@ -8,12 +8,16 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" CancelDestinationPageUrl="~/login.aspx" Height="397px" Width="351px">
+    <div>
+    
+        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" ContinueDestinationPageUrl="~/login.aspx">
             <WizardSteps>
                 <asp:CreateUserWizardStep runat="server" />
                 <asp:CompleteWizardStep runat="server" />
             </WizardSteps>
         </asp:CreateUserWizard>
+    
+    </div>
     </form>
 </body>
 </html>
